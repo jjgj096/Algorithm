@@ -27,28 +27,28 @@ int main(void) {
 	int* ary;
 
 
-	printf("�迭�� ũ�⸦ �Է��ϼ��� :");
+	printf("배열 크기를 입력하세요 :");
 	scanf("%d", &n);	//�迭�� ũ�⸦ �Է¹ް�, n�� ����.
 
 	ary = (int*)malloc(sizeof(int) * n);	//�Է¹��� n���� ũ���� �迭�� ������.
 
-	printf("�迭�� ������ ���� �Է��ϼ��� : ");
+	printf("배열에 들어갈 수를 입력하세요: ");
 	for (i = 0; i < n; i++) {				//n���� ���� ������� �迭�� ������.
 		scanf("%d", &ary[i]);
 	}
 
 	int key;								//ã�� ��ǥ�� ����
 
-	printf("ã�� ���� �Է��ϼ��� : ");		//ã�� Ÿ���� �Է¹���.
+	printf("찾을 수를 입력하세요 : ");		//ã�� Ÿ���� �Է¹���.
 	scanf("%d", &key);
 
-	printf("���� Ž���� �����մϴ�.");
+	printf("이진 탐색을 시작합니다.");
 
 	int index;								//recur_search �Լ��� ������ ���� int ����
 	index = recur_search(0, n, ary, key);	//����Լ� ȣ��
 
 	if (index == -1)						//���ϰ��� ���� ��Ȳ�� ����.
-		printf("����");
+		printf("실패");
 	else
 		printf("%d", index+1);
 
